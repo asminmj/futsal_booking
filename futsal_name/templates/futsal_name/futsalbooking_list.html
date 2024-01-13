@@ -1,0 +1,39 @@
+{% extends 'futsal_name/core.html' %}
+
+{% block content %}
+      <h1>Booking list</h1>
+
+   
+    
+{% for futsalbookingdetail in booking_list %}
+<div class="card">
+        <h5 class="card-header">{{ futsalbookingdetail}}</h5>
+        <div class="card-body">
+           
+       
+            <ul>
+                <li>Date: {{ futsalbookingdetail.booking_date }}</li>
+                <li>Name: {{ futsalbookingdetail.name }}</li>
+                <li>Web: {{ futsalbookingdetail.web }}</li>
+                <li>Location: {{ futsalbookingdetail.location }}</li>
+                <li>Futsal: {{ futsalbookingdetail.futsal }}</li>
+                <li>Incharge: {{ futsalbookingdetail.incharge }}</li>
+                <li>Phone: {{ futsalbookingdetail.phone }}</li>
+                <li>Rate: {{ futsalbookingdetail.rate }}</li>
+                <li>Players:<br>
+                        {% for users in futsalbookingdetail.players.all%}
+                            {{ user }}<br>
+                        {% endfor %}
+                </li>
+            <ul>
+    </div>
+</div>
+<br>
+
+    
+{% endfor %}
+    
+
+{% endblock content %}
+
+

@@ -1,0 +1,27 @@
+{% extends 'futsal_name/core.html' %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="card">
+    <h5 class="card-header">{{futsal}}</h5>
+    <div class="card-body">
+       
+   
+        <ul>
+            <li>Name: {{futsal.name}}</li>
+            <li>Address:    {{futsal.address}}</li>
+            <li>Phone:  {{futsal.phone}}</li>
+            <li>Zip_Code: {{futsal.zip_code}}</li>
+            <li>Web:  <a href="{{futsal.web}}">{{futsal.web}}</a></li>
+            <li>Email: {{futsal.email_address}}</li>
+          
+            </li>
+        <ul>
+</div>
+</div>
+<br>
+{% endblock content %}
+
+

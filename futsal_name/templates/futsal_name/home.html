@@ -1,0 +1,17 @@
+{% extends 'futsal_name/core.html' %}
+
+{% block content %}
+        <center>
+            <h1> hello {{ name }} Book your Futsal for-{{ month }}
+                {{ year }}-{{ location }}</h1>
+                As of - {{time}}
+                <br><br>
+                {{ cal|safe }}
+                
+                <br><br><br>
+        {{current_year}} - COPYRIGHT
+        </center>
+
+{% endblock content %}
+
+

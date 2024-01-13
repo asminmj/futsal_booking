@@ -1,0 +1,32 @@
+{% extends 'futsal_name/core.html' %}
+
+{% block content %}
+       
+    {% if searched %}
+        <h1> Results of Searched -{{ searched }} </h1>
+        <br>
+            <table class="table  table-striped table-hover table-bordered">
+                {% for futsal in futsals %}
+
+                <tr>
+                    <td>
+                        <a href="{% url 'futsals_show' futsal.id %}">{{futsal}}-{{futsal.address}}</a><br>
+
+                    </td>
+                </tr>
+                 {% endfor %}
+            </table>
+            {% else %}
+        <h1> Search futsal forgot</h1>
+
+    {% endif %}
+             
+  
+
+{% endblock content %}
+
+
+            
+      
+
+

@@ -1,0 +1,28 @@
+{% extends 'futsal_name/core.html' %}
+
+{% block content %}
+        <center>
+            <h1>Futsal List </h1>
+            <table class="table  table-striped table-hover table-bordered">
+            {% for futsal in futsal_list %}
+            <tr>
+                <td>
+                    <a href="{% url 'futsals_show' futsal.id %}">
+                    {{futsal}} - {{futsal.address}}</a> 
+                </td>
+                <td align="right">
+                    <a href="{% url 'futsals_update' futsal.id %}" class="btn btn-outline-secondary btn-sm">Update</a>
+                </td>
+            </tr>
+                
+            {% endfor %}
+        </table>
+             
+               
+        </center>
+
+{% endblock content %}
+
+
+
+
